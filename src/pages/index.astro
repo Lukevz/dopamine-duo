@@ -1,22 +1,25 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import config from '../content/config/config.json';
-import client from '../../tina/__generated__/client';
-import HomePage from "../../tina/pages/HomePage.tsx";
-const data = await client.queries.page({relativePath: "home.mdx"});
+import '../styles/global.css'
+import Layout from "../layouts/Layout.astro"
+
+import Header from '../components/Header.astro'
+import Hero from '../components/Hero.astro'
+import Tools from '../components/Tools.astro'
+import Footer from '../components/Footer.astro'
+import Reviews from '../components/Reviews.astro'
+import CallToAction from '../components/CallToAction.astro'
+import Works from '../components/Works.astro'
+import Service from '../components/Service.astro'
 
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={config.seo.title} description={config.seo.description} />
-	</head>
-	<body>
-		<Header />
-		<HomePage {...data} client:tina />
-		<Footer />
-	</body>
-</html>
+<Layout>
+  <Header />
+  <Hero />
+  <Tools />
+  <Service />
+  <Works />
+  <Reviews />
+  <CallToAction />
+  <Footer />
+</Layout>

@@ -1,0 +1,61 @@
+---
+import '../../styles/global.css'
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import { getCollection } from 'astro:content';
+import { TinaMarkdown } from 'tinacms/dist/rich-text';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+const styleSheet = {
+    actions: 'text-gray-500 flex items-center gap-2 hover:text-gray-700',
+}
+---
+
+<Layout>
+  <Header />
+
+  <section class="mb-30 p-3">
+    <div class="max-w-3xl mx-auto p-3 bg-white flex flex-col gap-7 border-3 mt-10">
+      {post.data.image?.url && (
+        <img src={post.data.image.url} alt={post.data.image.alt || ''} class="w-full border-2" />
+      )}
+      <h1 class="title text-4xl font-black">{post.data.title}</h1>
+
+      <div class="flex flex-col">
+        <div class="flex border-t border-b border-gray-100 mb-5 py-4">
+          <div class="flex-1 flex gap-6">
+            {post.data.author?.name && (
+              <span class="text-gray-500">By {post.data.author.name}</span>
+            )}
+            {post.data.pubDate && (
+              <span class="text-gray-500">{post.data.pubDate}</span>
+            )}
+          </div>
+          <div class="flex gap-6">
+            <a href="#" class={styleSheet.actions}><i class="ri-bookmark-line text-xl"></i></a>
+            <a href="#" class={styleSheet.actions}><i class="ri-share-forward-box-line text-xl"></i></a>
+          </div>
+        </div>
+        <div class="prose prose-lg max-w-none">
+          {post.data.body && (
+            <TinaMarkdown content={post.data.body} client:load />
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CallToAction />
+  <Footer />
+</Layout>

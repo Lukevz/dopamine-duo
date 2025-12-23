@@ -1,14 +1,13 @@
 import type { Collection } from "tinacms";
 
 export const BlogCollection: Collection = {
-
   name: "blog",
-  label: "Blogs",
+  label: "Blog Posts",
   path: "src/content/blog",
-  format: "mdx",
+  format: "md",
   ui: {
     router({ document }) {
-      return `/blog/${document._sys.filename}`;
+      return `/posts/${document._sys.filename}`;
     },
   },
   fields: [
@@ -20,24 +19,49 @@ export const BlogCollection: Collection = {
       required: true,
     },
     {
-      name: "description",
-      label: "Description",
+      name: "author",
+      label: "Author",
+      type: "object",
+      fields: [
+        {
+          name: "name",
+          label: "Author Name",
+          type: "string",
+        },
+        {
+          name: "url",
+          label: "Author Image URL",
+          type: "string",
+        },
+      ],
+    },
+    {
+      name: "image",
+      label: "Featured Image",
+      type: "object",
+      fields: [
+        {
+          name: "url",
+          label: "Image URL",
+          type: "image",
+        },
+        {
+          name: "alt",
+          label: "Alt Text",
+          type: "string",
+        },
+      ],
+    },
+    {
+      name: "tags",
+      label: "Tags",
       type: "string",
+      list: true,
     },
     {
       name: "pubDate",
       label: "Publication Date",
-      type: "datetime",
-    },
-    {
-      name: "updatedDate",
-      label: "Updated Date",
-      type: "datetime",
-    },
-    {
-      name: "heroImage",
-      label: "Hero Image",
-      type: "image",
+      type: "string",
     },
     {
       type: "rich-text",
@@ -46,4 +70,4 @@ export const BlogCollection: Collection = {
       isBody: true,
     },
   ],
-}
+};

@@ -1,38 +1,143 @@
 {
+  "author": {
+    "name": "Dopamine Duo",
+    "nickname": "Dopamine Duo",
+    "email": "csavoiebusiness@gmail.com"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/thedopamineduo/",
+    "github": "https://github.com/thedopamineduo"
+  },
   "seo": {
     "title": "Dopamine Duo",
-    "description": "A couple navigating and learning about our neurodivergent brains! ",
+    "description": "A couple navigating and learning about our neurodivergent brains!",
     "siteOwner": "Dopamine Duo"
   },
-  "nav": [
-    {
-      "title": "Home",
-      "link": "/"
-    },
-    {
-      "title": "Blog",
-      "link": "/blog"
-    },
-    {
-      "title": "About",
-      "link": "/about"
-    }
-  ],
-  "contactLinks": [
-    {
-      "title": "Twitter",
-      "link": "https://x.com/tinacms",
-      "icon": "TbBrandTwitter"
-    },
-    {
-      "title": "Docs",
-      "link": "https://tina.io/docs",
-      "icon": "TbBook2"
-    },
-    {
-      "title": "GitHub",
-      "link": "https://github.com/tinacms/tinacms",
-      "icon": "TbBrandGithub"
-    }
-  ]
+  "cta": {
+    "title": "See on Github",
+    "link": "https://github.com/yourhandle"
+  },
+  "hero": {
+    "tagline": "We're Claire & Luke",
+    "highlightWord": "neurodivergent",
+    "description": "A couple navigating and learning about our neurodivergent brains! ",
+    "ctaText": "Free Resources",
+    "ctaLink": "/blog",
+    "profileImage": "/hero.JPG"
+  },
+  "tools": {
+    "items": [
+      "Advice",
+      "Resources",
+      "Tools",
+      "Neurodivergents",
+      "Couples",
+      "AuDHD",
+      "Autistic"
+    ]
+  },
+  "serviceSection": {
+    "heading": "Services we're providing that derive 99% result",
+    "stats": [
+      {
+        "name": "projects",
+        "value": "50+"
+      },
+      {
+        "name": "Client ROI",
+        "value": "120%"
+      },
+      {
+        "name": "Experience",
+        "value": "6 years"
+      }
+    ],
+    "services": [
+      {
+        "name": "User Research",
+        "description": "Services we're providing that derive 99% result",
+        "icon": "research"
+      },
+      {
+        "name": "Wireframing",
+        "description": "Services we're providing that derive 99% result",
+        "icon": "wire"
+      },
+      {
+        "name": "UI Designing",
+        "description": "Services we're providing that derive 99% result",
+        "icon": "ui"
+      },
+      {
+        "name": "Prototyping",
+        "description": "Services we're providing that derive 99% result",
+        "icon": "proto"
+      }
+    ]
+  },
+  "portfolio": {
+    "heading": "My Portfolio",
+    "items": [
+      {
+        "name": "Portfolio design",
+        "description": "UI design - User research - webflow development",
+        "image": "https://images.pexels.com/photos/1051075/pexels-photo-1051075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "link": "#"
+      },
+      {
+        "name": "Portfolio design",
+        "description": "UI design - User research - webflow development",
+        "image": "https://images.pexels.com/photos/2303781/pexels-photo-2303781.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "link": "#"
+      },
+      {
+        "name": "Portfolio design",
+        "description": "UI design - User research - webflow development",
+        "image": "https://images.pexels.com/photos/441963/pexels-photo-441963.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "link": "#"
+      },
+      {
+        "name": "Portfolio design",
+        "description": "UI design - User research - webflow development",
+        "image": "https://images.pexels.com/photos/245240/pexels-photo-245240.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        "link": "#"
+      }
+    ]
+  },
+  "reviews": {
+    "heading": "Here's what my clients are saying about my work",
+    "testimonials": [
+      {
+        "quote": "Design is a bridge that connects everyone and everything",
+        "clientName": "Client Name",
+        "clientPosition": "Project Manager, Company Name",
+        "clientPhoto": "https://images.pexels.com/photos/2709386/pexels-photo-2709386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        "quote": "Design is a bridge that connects everyone and everything",
+        "clientName": "Client Name",
+        "clientPosition": "Project Manager, Company Name",
+        "clientPhoto": "https://images.pexels.com/photos/2128819/pexels-photo-2128819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        "quote": "Design is a bridge that connects everyone and everything",
+        "clientName": "Client Name",
+        "clientPosition": "Project Manager, Company Name",
+        "clientPhoto": "https://images.pexels.com/photos/2169429/pexels-photo-2169429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      },
+      {
+        "quote": "Design is a bridge that connects everyone and everything",
+        "clientName": "Client Name",
+        "clientPosition": "Project Manager, Company Name",
+        "clientPhoto": "https://images.pexels.com/photos/3586798/pexels-photo-3586798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      }
+    ]
+  },
+  "callToAction": {
+    "title": "Let's start designing your project",
+    "description": "Want to see how to transform your brand into a unique style. Send me a message",
+    "buttonText": "Hire me",
+    "buttonLink": "#",
+    "enabled": false
+  }
 }
