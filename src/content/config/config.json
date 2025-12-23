@@ -10,7 +10,8 @@
   },
   "seo": {
     "title": "Dopamine Duo",
-    "description": "A couple navigating and learning about our neurodivergent brains!"
+    "description": "A couple navigating and learning about our neurodivergent brains!",
+    "siteOwner": "Dopamine Duo"
   },
   "cta": {
     "title": "See on Github",
